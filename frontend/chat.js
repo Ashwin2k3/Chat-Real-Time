@@ -15,6 +15,9 @@ socket.addEventListener('message', function (event) {
     
     // Append the message to the chat box
     chatBox.appendChild(messageElement);
+    
+    // Scroll chat to the bottom when a new message is added
+    chatBox.scrollTop = chatBox.scrollHeight;
 });
 
 // Send a message when the user clicks the "Send" button
@@ -30,7 +33,7 @@ messageInput.addEventListener('keydown', function (event) {
 });
 
 function sendMessage() {
-    const message = messageInput.value;
+    const message = messageInput.value.trim();
     
     if (message) {
         // Send the message through the WebSocket
@@ -45,12 +48,24 @@ function sendMessage() {
         
         // Clear the input field
         messageInput.value = '';
+        
+        // Scroll chat to the bottom
+        chatBox.scrollTop = chatBox.scrollHeight;
     }
 }
 
-// Scroll chat to the bottom when a new message is added
-const observer = new MutationObserver(function () {
-    chatBox.scrollTop = chatBox.scrollHeight;
+// Handle WebSocket errors
+socket.addEventListener('error', function (error) {
+    console.error('WebSocket error:', error);
 });
-observer.observe(chatBox, { childList: true });
+
+// Handle WebSocket connection open event
+socket.addEventListener('open', function () {
+    console.log('WebSocket connection established.');
+});
+
+// Handle WebSocket connection close event
+socket.addEventListener('close', function () {
+    console.log('WebSocket connection closed.');
+});
 

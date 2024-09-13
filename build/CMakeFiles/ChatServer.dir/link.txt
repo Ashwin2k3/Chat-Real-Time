@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/ChatServer.dir/src/main.cpp.o CMakeFiles/ChatServer.dir/src/chat_server.cpp.o -o ChatServer  /opt/homebrew/lib/libboost_system-mt.dylib -lpthread
