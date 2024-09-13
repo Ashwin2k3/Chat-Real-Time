@@ -1,0 +1,17 @@
+/ChatApp
+├── CMakeLists.txt           # CMake configuration for building the C++ server
+├── build/                   # Directory where build files will be generated (created by CMake)
+├── include/                 # C++ header files
+│   └── chat_server.hpp      # Header for the WebSocket server
+├── src/                     # C++ source files
+│   ├── chat_server.cpp      # Implementation of the WebSocket server
+│   └── main.cpp             # Entry point of the WebSocket server
+├── frontend/                # Frontend for the chat application
+│   ├── index.html           # Main HTML file for the chat client
+│   └── chat.js              # JavaScript for handling WebSocket communication
+└── static/                  # Any static resources (optional)
+    ├── css/                 # CSS files for styling
+    │   └── styles.css       # Optional CSS for custom styles
+    └── images/              # Images, if needed
+        └── logo.png         # Optional image/logo for the chat app
+
