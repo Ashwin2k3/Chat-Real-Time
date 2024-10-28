@@ -1,5 +1,5 @@
  
-Building a real-time chat application can be an exciting project that involves multiple technologies and frameworks. Below is a guide for building a basic real-time chat application using **C++**, **WebSockets**, and **Boost.Asio** for the server, and **HTML/JavaScript** for the frontend. I'll break it down into key components:
+real-time chat application using **C++**, **WebSockets**, and **Boost.Asio** for the server, and **HTML/JavaScript** for the frontend. I'll break it down into key components:
 
 ### **Key Components of a Real-Time Chat Application**
 
