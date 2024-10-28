@@ -1,5 +1,6 @@
  
-real-time chat application using **C++**, **WebSockets**, and **Boost.Asio** for the server, and **HTML/JavaScript** for the frontend. I'll break it down into key components:
+real-time chat application using **C++**, **WebSockets**, and **Boost.Asio** for the server, and **HTML/JavaScript** for the frontend. 
+key components:
 
 ### **Key Components of a Real-Time Chat Application**
 
